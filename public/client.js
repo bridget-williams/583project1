@@ -3,7 +3,7 @@
 
 console.log('hello world :o');
 
-fetch('/v1/public/characters').then(resp => resp.json()).then((data) => {
+fetch('/v1/public/characters').then((data) => {
   console.log('Data:' + data);
   return(data);
 });

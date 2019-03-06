@@ -851,4 +851,4 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   express: ^4.16.4
-  marvel-api: ^1.1.0
+  marvel-api: 1.1.0
