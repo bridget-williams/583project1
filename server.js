@@ -26,7 +26,7 @@ const marvel = api.createClient({
 
 // API Calls
 
-app.get('/characters', function (request, response) {
+app.get('v1/public/characters', function (request, response) {
   // Search for a character
   marvel.characters.findByName('spider-man')
   .then(function(res) {

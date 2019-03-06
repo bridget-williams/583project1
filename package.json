@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "express": "^4.16.4",
-    "marvel-api": "1.1.0"
+    "fetch": "^1.1.0",
+    "marvel-api": "^1.1.0"
   },
   "engines": {
     "node": "10.x"
