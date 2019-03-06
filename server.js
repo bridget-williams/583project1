@@ -2,8 +2,8 @@
 // where your node app starts
 
 // init project
-const express = require('express');
-const app = express();
+var express = require('express');
+var app = express();
 
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
@@ -17,17 +17,18 @@ app.get('/', function(request, response) {
 });
 
 // Marvel API wrapper Intialization
-const api = require('marvel-api');
+var api = require('marvel-api');
 
-const marvel = api.createClient({
+var marvel = api.createClient({
   publicKey: process.env.PUBLIC_KEY
 , privateKey: process.env.PRIVATE_KEY
 });
 
 // API Calls
-
-app.get('/characters', function (request, response) {
+console.log('before the api request');
+app.get('/', function (request, response) {
   // Search for a character
+  consolel.log("Searching...");
   marvel.characters.findByName('spider-man').then(function(res) {
     console.log('Found character ID', res.data[0].id);
     response.send(res.data[0].id);
