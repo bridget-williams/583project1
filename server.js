@@ -29,14 +29,15 @@ console.log('before the api request');
 app.get('/characters', function (request, response) {
   // Search for a character
   console.log("Searching...");
-  marvel.characters.findByName('spider-man').then(function(res) {
-    console.log('Found character ID', res.data[0].id);
-    let results = res.data[0].id;
+  marvel.characters.find('1011227').then(function(res) {
+    console.log('Found character', res.data[0].id);
+    let results = res.data;
+    console.log(results);
     response.send(results);
     // return marvel.characters.comics(res.data[0].id);
-  }, function(err) {
-      console.error(err);
-    });
+  }) 
+  .fail(console.error)
+  .done();
 });
 
 
