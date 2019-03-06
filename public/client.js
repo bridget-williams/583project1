@@ -3,10 +3,9 @@
 
 console.log('hello world :o');
 
-fetch('server').then(resp => resp.json()).then((data) => {
-  console.log(data);
+fetch('/v1/public/characters').then(resp => resp.json()).then((data) => {
+  console.log('Data:' + data);
   return(data);
-  
 });
 
 // our default array of dreams
