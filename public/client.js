@@ -9,9 +9,11 @@ document.addEventListener("DOMContentLoaded", function(){
   console.log('hello world :o');
 
   //API Responses
-  fetch('/characters').then(resp => resp.json()).then((data) => {
+  fetch('/characters')
+    .then((resp) => resp.json())
+    .then((data) => {
     console.group('%cResponse from /characters', 'color: #F037A5; font-size: large');
-    console.log('Data:' + data);
+    console.log('Data:' + data[0]);
     console.groupEnd();
     return(data);
   });

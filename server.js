@@ -30,7 +30,7 @@ app.get('/characters', function (request, response) {
   // Search for a character
   console.log("Searching...");
   marvel.characters.find('1011227').then(function(res) {
-    console.log('Found character', res.data[0].id);
+    console.log('Found character', res.data);
     let results = res.data;
     console.log(results);
     response.send(results);
