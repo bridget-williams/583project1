@@ -16,6 +16,28 @@ app.get('/', function(request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
+// Marvel API wrapper Intialization
+var api = require('marvel-api');
+
+var marvel = api.createClient({
+  publicKey: process.env.PUBLIC_KEY
+, privateKey: process.env.PRIVATE_KEY
+});
+
+// API Calls
+marvel.characters.findByName('spider-man')
+  .then(function(res) {
+    console.log('Found character ID', res.data[0].id);
+    return marvel.characters.comics(res.data[0].id);
+  })
+  .then(function(res) {
+    console.log('found %s comics of %s total', res.meta.count, res.meta.total);
+    console.log(res.data);
+  })
+  .fail(console.error)
+  .done();
+
+
 // listen for requests :)
 const listener = app.listen(process.env.PORT, function() {
   console.log('Your app is listening on port ' + listener.address().port);
