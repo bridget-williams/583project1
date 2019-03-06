@@ -26,12 +26,13 @@ var marvel = api.createClient({
 
 // API Calls
 console.log('before the api request');
-app.get('/', function (request, response) {
+app.get('/characters', function (request, response) {
   // Search for a character
-  consolel.log("Searching...");
+  console.log("Searching...");
   marvel.characters.findByName('spider-man').then(function(res) {
     console.log('Found character ID', res.data[0].id);
-    response.send(res.data[0].id);
+    let results = res.data[0].id;
+    response.send(results);
     // return marvel.characters.comics(res.data[0].id);
   }, function(err) {
       console.error(err);
