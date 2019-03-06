@@ -24,14 +24,15 @@ var marvel = api.createClient({
 , privateKey: process.env.PRIVATE_KEY
 });
 
+
 // API Calls
 console.log('before the api request');
 app.get('/characters', function (request, response) {
   // Search for a character
   console.log("Searching...");
-  marvel.characters.find('1011227').then(function(res) {
-    console.log('Found character', res.data);
-    let results = res.data;
+  marvel.characters.find('1009189').then(function(res) {
+    console.log('Found character', res.data[0]);
+    let results = res.data[0];
     console.log(results);
     response.send(results);
     // return marvel.characters.comics(res.data[0].id);

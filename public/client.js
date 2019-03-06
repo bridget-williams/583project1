@@ -7,13 +7,22 @@
 document.addEventListener("DOMContentLoaded", function(){
   
   console.log('hello world :o');
-
+  
+  let characterName = '';
+  let characterPhoto = '';
+  
   //API Responses
   fetch('/characters')
     .then((resp) => resp.json())
     .then((data) => {
     console.group('%cResponse from /characters', 'color: #F037A5; font-size: large');
-    console.log('Data:' + data[0]);
+    console.log('Data:' + data.name);
+   characterName=data.name;
+    characterPhoto = data.thumbnail.path;
+    console.log(characterPhoto, characterName);
+
+
+    
     console.groupEnd();
     return(data);
   });
