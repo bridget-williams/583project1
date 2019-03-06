@@ -5,10 +5,10 @@
 // Document Ready Function
 document.addEventListener("DOMContentLoaded", function(){
   
-
   console.log('hello world :o');
 
-  fetch('v1/public/characters').then(resp => resp.json()).then((data) => {
+  //API Responses
+  fetch('/characters').then(resp => resp.json()).then((data) => {
     console.group('%cResponse from /characters', 'color: #F037A5; font-size: large');
     console.log('Data:' + data);
     console.groupEnd();
@@ -16,8 +16,11 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 
 
+  
+  
+  
+  
   // chart
-
   var ctx = document.getElementById("myChart").getContext('2d');
   var myChart = new Chart(ctx, {
       type: 'bar',
