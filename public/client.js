@@ -3,9 +3,10 @@
 
 console.log('hello world :o');
 
-fetch('/search-track').then(resp => resp.json()).then((data) => {
-
-return(data);
+fetch('server').then(resp => resp.json()).then((data) => {
+  console.log(data);
+  return(data);
+  
 });
 
 // our default array of dreams
