@@ -19,7 +19,7 @@ app.get('/', function(request, response) {
 // Marvel API wrapper Intialization
 const api = require('marvel-api');
 
-var marvel = api.createClient({
+const marvel = api.createClient({
   publicKey: process.env.PUBLIC_KEY
 , privateKey: process.env.PRIVATE_KEY
 });
@@ -29,11 +29,7 @@ marvel.characters.findByName('spider-man')
   .then(function(res) {
     console.log('Found character ID', res.data[0].id);
     return marvel.characters.comics(res.data[0].id);
-  })
-  .then(function(res) {
-    console.log('found %s comics of %s total', res.meta.count, res.meta.total);
-    console.log(res.data);
-    this.send(res.data);
+  res.send(res.data[0].id);
   })
   .fail(console.error)
   .done();

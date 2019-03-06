@@ -3,6 +3,11 @@
 
 console.log('hello world :o');
 
+fetch('/search-track').then(resp => resp.json()).then((data) => {
+
+return(data);
+});
+
 // our default array of dreams
 const dreams = [
   'Find and count some sheep',
