@@ -39,16 +39,24 @@ console.log(sidekicks[0].Id);
 console.log('before the api request');
 app.get('/characters', function (request, response) {
   // Search for a character
-  console.log("Searching...");
-  marvel.characters.find('1010743').then(function(res) {
+  for(var i = 0 ; i < sidekicks.length ; i++){
+  marvel.characters.find(sidekicks[i].Id).then(function(res) {
     console.log('Found character', res.data[0]);
     let results = res.data[0];
     console.log(results);
-    response.send(results);
-    // return marvel.characters.comics(res.data[0].id);
-  }) 
+    sidekicks[i].name = "hello";
+    side[i]['whatever'] = ="helo
+                                        
+                                               
+    
+    
+    
+    })
+   
   .fail(console.error)
   .done();
+  }
+  response.send(results);
 });
 
 
