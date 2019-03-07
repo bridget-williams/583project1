@@ -10,10 +10,6 @@ body {
   margin: 0;
 }
 
-#grid-wrapper{
-  display: grid;
-}
-
 h1 {
   font-family: 'Bangers', cursive;
   color: #373fff;
@@ -21,6 +17,12 @@ h1 {
 
 .bold {
   font-weight: bold;
+}
+
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 p {
@@ -53,5 +55,10 @@ p {
 #chart-section{
   background: #000000;
   color: #ffffff;
+}
+
+#myChart{
+  max-height: 70%;
+  max-width: 90%;
 }
 
