@@ -27,11 +27,23 @@ document.addEventListener("DOMContentLoaded", function(){
     let grootSeries = data.series.available;
     let grootStories = data.stories.available;
     console.log(characterPhoto, characterName);
-
+    
+    let h2 = document.createElement('h2');
+    h2.innerHTML= 'Groot';
+    document.getElementById('intro-section').append(h2);
     let img = document.createElement('img');
     img.setAttribute('src', characterPhoto);
     img.setAttribute('id', 'groot-photo');
     document.getElementById('intro-section').append(img);
+    
+    let h22 = document.createElement('h2');
+    h22.innerHTML= 'Groot- This is a placeholder';
+    document.getElementById('intro-section').append(h22);
+    let img2 = document.createElement('img');
+    img2.setAttribute('src', characterPhoto);
+    img2.setAttribute('id', 'groot-photo');
+    document.getElementById('intro-section').append(img2);
+
 
     
     console.groupEnd();
@@ -40,53 +52,36 @@ document.addEventListener("DOMContentLoaded", function(){
     
   
   // chart
+    
+    let chartHead = document.createElement('h2');
+    chartHead.innerHTML= 'How do these well known sidekicks compare?';
+    document.getElementById('chart-section').append(chartHead);
+    
+    
   var ctx = document.getElementById("myChart").getContext('2d');
   var myChart = new Chart(ctx, {
       type: 'bar',
-      // data: {
-      //     labels: ["Comics", "Series", "Stories"],
-      //     datasets: [{
-      //         label: 'Groot',
-      //         data: [grootComics, grootSeries, grootStories],
-      //         backgroundColor: [
-      //             'rgba(255, 99, 132, 0.2)',
-      //             'rgba(54, 162, 235, 0.2)',
-      //             'rgba(255, 206, 86, 0.2)',
-      //             'rgba(75, 192, 192, 0.2)',
-      //             'rgba(153, 102, 255, 0.2)',
-      //             'rgba(255, 159, 64, 0.2)'
-      //         ],
-      //         borderColor: [
-      //             'rgba(255,99,132,1)',
-      //             'rgba(54, 162, 235, 1)',
-      //             'rgba(255, 206, 86, 1)',
-      //             'rgba(75, 192, 192, 1)',
-      //             'rgba(153, 102, 255, 1)',
-      //             'rgba(255, 159, 64, 1)'
-      //         ],
-      //         borderWidth: 1
-      //     }]
-      // }
-    data: {
-    labels: ["Comics", "Series", "Stories"],
-    datasets: [
-        {
-            label: "Groot",
-            backgroundColor: "blue",
-            data: [grootComics, grootSeries, grootStories]
-        },
-        {
-            label: "Chico",
-            backgroundColor: "red",
-            data: [4,3,5]
-        },
-        {
-            label: "Groucho",
-            backgroundColor: "green",
-            data: [7,2,6]git 
-        }
-    ]
-}
+  
+      data: {
+      labels: ["Comics", "Series", "Stories"],
+      datasets: [
+          {
+              label: "Groot",
+              backgroundColor: "blue",
+              data: [grootComics, grootSeries, grootStories]
+          },
+          {
+              label: "Chico",
+              backgroundColor: "red",
+              data: [4,3,5]
+          },
+          {
+              label: "Groucho",
+              backgroundColor: "green",
+              data: [7,2,6]
+          }
+      ]
+  }
 
     ,
       options: {
