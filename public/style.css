@@ -31,9 +31,6 @@ h2{
   align-items: center;
 }
 
-p {
-  max-width: 600px;
-}
 
 .big-text{
   font-size: 5em;
@@ -49,6 +46,14 @@ p {
   background: #cc4224;
 }
 
+.intro-text{
+  font-size: 18pt;
+  width: 80%;
+  text-align: center;
+  color: #ffffff;
+  
+}
+
 #character1{
   background: #F3D403;
   display: flex;
@@ -62,6 +67,7 @@ p {
   flex-wrap: wrap;
   align-items: center;
   margin: 10pt;
+  margin-top: -150pt;
 }
 
 #character2{
@@ -69,8 +75,12 @@ p {
 }
 
 .character-photo{
-  width: 200px; 
-  height: 200px;
+  width: 275px; 
+  height: 275px;
+}
+
+a{
+  text-decoration: none;
 }
 
 #chart-section{

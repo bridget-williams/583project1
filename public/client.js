@@ -58,12 +58,14 @@ document.addEventListener("DOMContentLoaded", function(){
       wrapper.setAttribute('class','character-wrapper');
       let h2 = document.createElement('h2');
       let p = document.createElement('p');
+      p.innerHTML = description;
       h2.innerHTML= name;
       wrapper.append(h2);
       let img = document.createElement('img');
       img.setAttribute('src', photo);
       img.setAttribute('class', 'character-photo');
       wrapper.append(img);
+      wrapper.append(p);
       document.getElementById('character1').append(wrapper);
     });
     
