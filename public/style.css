@@ -29,6 +29,11 @@ p {
   max-width: 600px;
 }
 
+.big-text{
+  font-size: 5em;
+  letter-spacing: 5px;
+}
+
 .panel{
   height:800px;
   background:white;

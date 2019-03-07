@@ -96,12 +96,8 @@ document.addEventListener("DOMContentLoaded", function(){
               label: "Chico",
               backgroundColor: "red",
               data: [4,3,5]
-          },
-          {
-              label: "Groucho",
-              backgroundColor: "green",
-              data: [7,2,6]
           }
+          
       ]
   }
 
