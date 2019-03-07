@@ -6,6 +6,26 @@
 // Document Ready Function
 document.addEventListener("DOMContentLoaded", function(){
   
+  var controller = new ScrollMagic.Controller({
+			globalSceneOptions: {
+				triggerHook: 'onLeave'
+			}
+		});
+
+		// get all slides
+		var slides = document.querySelectorAll("section.panel");
+
+		// create scene for every slide
+		for (var i=0; i<slides.length; i++) {
+			new ScrollMagic.Scene({
+					triggerElement: slides[i]
+				})
+				.setPin(slides[i])
+				.addIndicators() // add indicators (requires plugin)
+				.addTo(controller);
+		}
+
+
   
   
   console.log('hello world :o');
@@ -32,19 +52,19 @@ document.addEventListener("DOMContentLoaded", function(){
     
     let h2 = document.createElement('h2');
     h2.innerHTML= 'Groot';
-    document.getElementById('intro-section').append(h2);
+    document.getElementById('character1').append(h2);
     let img = document.createElement('img');
     img.setAttribute('src', characterPhoto);
     img.setAttribute('id', 'groot-photo');
-    document.getElementById('intro-section').append(img);
+    document.getElementById('character1').append(img);
     
     let h22 = document.createElement('h2');
     h22.innerHTML= 'Groot- This is a placeholder';
-    document.getElementById('intro-section').append(h22);
+    document.getElementById('character2').append(h22);
     let img2 = document.createElement('img');
     img2.setAttribute('src', characterPhoto);
     img2.setAttribute('id', 'groot-photo');
-    document.getElementById('intro-section').append(img2);
+    document.getElementById('character2').append(img2);
 
 
     
