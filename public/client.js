@@ -52,24 +52,23 @@ document.addEventListener("DOMContentLoaded", function(){
     data.forEach(function(c){
       let name = c.data[0].name;
       let photo = c.data[0].thumbnail.path + '.' + c.data[0].thumbnail.extension;
+      let description = c.data[0].description
+      let wrapper = document.createElement('div');
+      wrapper.setAttribute('class','character-wrapper');
       let h2 = document.createElement('h2');
+      let p = document.createElement('p');
       h2.innerHTML= name;
-      document.getElementById('character1').append(h2);
+      wrapper.append(h2);
       let img = document.createElement('img');
       img.setAttribute('src', photo);
-      img.setAttribute('id', 'groot-photo');
-      document.getElementById('character1').append(img);
+      img.setAttribute('class', 'character-photo');
+      wrapper.append(img);
+      document.getElementById('character1').append(wrapper);
     });
     
     
     
-    
-    
-    grootName=data[0].data[0].name;
-    grootPhoto = data[0].data[0].thumbnail.path + '.' + data[0].data[0].thumbnail.extension;
-    let grootComics = data[0].data[0].comics.available;
-    let grootSeries = data[0].data[0].series.available;
-    let grootStories = data[0].data[0].stories.available;
+
     
     falconName=data[1].data[0].name;
     falconPhoto = data[1].data[0].thumbnail.path + '.' + data[0].data[0].thumbnail.extension;
@@ -78,13 +77,6 @@ document.addEventListener("DOMContentLoaded", function(){
     let falconStories = data[1].data[0].stories.available;
     
     
-    let h2 = document.createElement('h2');
-    h2.innerHTML= grootName;
-    document.getElementById('character1').append(h2);
-    let img = document.createElement('img');
-    img.setAttribute('src', grootPhoto);
-    img.setAttribute('id', 'groot-photo');
-    document.getElementById('character1').append(img);
     
     let h22 = document.createElement('h2');
     h22.innerHTML= falconName;
