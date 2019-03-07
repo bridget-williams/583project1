@@ -30,11 +30,17 @@ document.addEventListener("DOMContentLoaded", function(){
   
   console.log('hello world :o');
   
-  let characterName = '';
-  let characterPhoto = '';
+  let grootName = '';
+  let grootPhoto = '';
   let grootComics ='' ;
   let grootSeries = '';
   let grootStories = '';
+  
+  let falconName = '';
+  let falconPhoto = '';
+  let falconComics ='' ;
+  let falconSeries = '';
+  let falconStories = '';
   
   //API Responses
   fetch('/characters')
@@ -42,15 +48,38 @@ document.addEventListener("DOMContentLoaded", function(){
     .then((data) => {
     console.group('%cResponse from /characters', 'color: #F037A5; font-size: large');
     console.log(data);
-    characterName=data[0].data[0].name;
+    
+    data.forEach(function(c){
+      let name = c.data[0].name;
+      let photo = c.data[0].thumbnail.path + '.' + c.data[0].thumbnail.extension;
+      let h2 = document.createElement('h2');
+      h2.innerHTML= name;
+      document.getElementById('character1').append(h2);
+      let img = document.createElement('img');
+      img.setAttribute('src', photo);
+      img.setAttribute('id', 'groot-photo');
+      document.getElementById('character1').append(img);
+    });
+    
+    
+    
+    
+    
+    grootName=data[0].data[0].name;
     grootPhoto = data[0].data[0].thumbnail.path + '.' + data[0].data[0].thumbnail.extension;
     let grootComics = data[0].data[0].comics.available;
     let grootSeries = data[0].data[0].series.available;
     let grootStories = data[0].data[0].stories.available;
     
+    falconName=data[1].data[0].name;
+    falconPhoto = data[1].data[0].thumbnail.path + '.' + data[0].data[0].thumbnail.extension;
+    let falconComics = data[1].data[0].comics.available;
+    let falconSeries = data[1].data[0].series.available;
+    let falconStories = data[1].data[0].stories.available;
+    
     
     let h2 = document.createElement('h2');
-    h2.innerHTML= 'Groot';
+    h2.innerHTML= grootName;
     document.getElementById('character1').append(h2);
     let img = document.createElement('img');
     img.setAttribute('src', grootPhoto);
@@ -58,10 +87,10 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById('character1').append(img);
     
     let h22 = document.createElement('h2');
-    h22.innerHTML= 'Groot- This is a placeholder';
+    h22.innerHTML= falconName;
     document.getElementById('character2').append(h22);
     let img2 = document.createElement('img');
-    img2.setAttribute('src', characterPhoto);
+    img2.setAttribute('src', falconPhoto);
     img2.setAttribute('id', 'groot-photo');
     document.getElementById('character2').append(img2);
 
@@ -95,9 +124,9 @@ document.addEventListener("DOMContentLoaded", function(){
               data: [grootComics, grootSeries, grootStories]
           },
           {
-              label: "Chico",
+              label: falconName,
               backgroundColor: "#2A75B3",
-              data: [4,3,5]
+              data: [falconComics, falconSeries, falconStories]
           }
           
       ]
