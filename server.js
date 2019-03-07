@@ -30,7 +30,7 @@ console.log('before the api request');
 app.get('/characters', function (request, response) {
   // Search for a character
   console.log("Searching...");
-  marvel.characters.find('1009189').then(function(res) {
+  marvel.characters.find('1010743').then(function(res) {
     console.log('Found character', res.data[0]);
     let results = res.data[0];
     console.log(results);

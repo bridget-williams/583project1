@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
     console.group('%cResponse from /characters', 'color: #F037A5; font-size: large');
     console.log('Data:' + data.name);
    characterName=data.name;
-    characterPhoto = data.thumbnail.path;
+    characterPhoto = data.thumbnail.path+;
     console.log(characterPhoto, characterName);
 
 
@@ -27,7 +27,9 @@ document.addEventListener("DOMContentLoaded", function(){
     return(data);
   });
 
-
+let img = document.createElement('img');
+    img.setAttribute('src', characterPhoto);
+    document.getElementById('intro-section').append(img);
   
   
   
