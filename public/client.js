@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function(){
     
     let chartHead = document.createElement('h2');
     chartHead.innerHTML= 'How do these well known sidekicks compare?';
-    document.getElementById('chart-section').append(chartHead);
+    document.getElementById('chart-head').append(chartHead);
     
     
   var ctx = document.getElementById("myChart").getContext('2d');
