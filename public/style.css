@@ -10,6 +10,11 @@ body {
   margin: 0;
 }
 
+section{
+  margin:0;
+  padding:0;
+}
+
 h1, h2{
   font-family: 'Bangers', cursive;
   color: #373fff;
@@ -105,6 +110,12 @@ a{
 @media screen and (max-width: 750px) {
   #character1 {
     flex-direction: column;
+    height: 250vh;
+    bottom: 100pt;
+  }
+  
+  .character-wrapper{
+    margin-top: -10px;
     
   }
   
