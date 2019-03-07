@@ -81,6 +81,9 @@ document.addEventListener("DOMContentLoaded", function(){
     
     
   var ctx = document.getElementById("myChart").getContext('2d');
+    Chart.defaults.global.defaultFontFamily = 'Raleway';
+    Chart.defaults.global.defaultFontColor = '#cc4224';
+     Chart.defaults.global.defaultFontStyle = 'bold';
   var myChart = new Chart(ctx, {
       type: 'bar',
   
@@ -89,12 +92,12 @@ document.addEventListener("DOMContentLoaded", function(){
       datasets: [
           {
               label: "Groot",
-              backgroundColor: "blue",
+              backgroundColor: "#F3D403",
               data: [grootComics, grootSeries, grootStories]
           },
           {
               label: "Chico",
-              backgroundColor: "red",
+              backgroundColor: "#2A75B3",
               data: [4,3,5]
           }
           
@@ -106,9 +109,7 @@ document.addEventListener("DOMContentLoaded", function(){
           scales: {
               yAxes: [{
                   ticks: {
-                      beginAtZero:true,
-                     
-
+                      beginAtZero:true
                   }
               }]
           }
