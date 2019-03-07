@@ -29,9 +29,10 @@ var marvel = api.createClient({
 
 let sidekicks= [
   {'Id':'1010743'},
-  {'Id':'1009297'},
-  {'Id':'1009720'},
-  {'Id':'1009211'}
+  {'Id':'1009297'}
+  //,
+  // {'Id':'1009720'},
+  // {'Id':'1009211'}
   ]
 
 console.log(sidekicks[0].Id);
@@ -40,15 +41,46 @@ console.log(sidekicks[0].Id);
 app.get('/characters', function (request, response) {
   // Search for a character
   console.log("Searching...");
-  marvel.characters.find('1010743').then(function(res) {
-    console.log('Found', res.data[0].name);
-    let results = res.data[0];
+//   marvel.characters.find('1010743').then(function(res) {
+//     console.log('Found', res.data[0].name);
+//     let results = res.data[0];
     
-    response.send(results);
-    // return marvel.characters.comics(res.data[0].id);
-  }) 
-  .fail(console.error)
-  .done();
+//     response.send(results);
+//     // return marvel.characters.comics(res.data[0].id);
+//   }) 
+//   .fail(console.error)
+//   .done();
+  
+  //loop to get data on 2 characters
+  sidekicks.forEach((s) => {
+    marvel.characters.find(s.id)
+    .then(function(data){
+      console.log(data);
+        // Persist the data on this country object
+        s.data[0] = data.body;
+    }, function(err) {
+      console.error(err);
+    });
+  });
+  
+  // Check will see if we have .data on all the country objects
+  // which indicates all requests have returned successfully.
+  // If the lengths don't match then we call check again in 500ms
+  let check = () => {
+    if (sidekicks.filter(s => s.data !== undefined).length 
+    !== sidekicks.length) {
+      setTimeout(check, 500);
+    } else {
+      response.send(sidekicks);
+    }
+  }
+  
+  // Call check so we don't send a response until we have all the data back
+  check();
+  
+  
+  
+  
 });
 
 
