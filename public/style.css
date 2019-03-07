@@ -6,13 +6,19 @@
 }
 
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  font-family: 'Raleway', helvetica, arial, sans-serif;
   margin: 0;
 }
 
-h1 {
+h1, h2{
   font-family: 'Bangers', cursive;
   color: #373fff;
+  margin:5pt;
+}
+
+h2{
+  color: #cc4224;
+  font-size: 3em;
 }
 
 .bold {
