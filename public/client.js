@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function(){
       let name = c.data[0].name;
       let photo = c.data[0].thumbnail.path + '.' + c.data[0].thumbnail.extension;
       let description = c.data[0].description
+      let appears = '';
       let wrapper = document.createElement('div');
       wrapper.setAttribute('class','character-wrapper');
       let h2 = document.createElement('h2');
@@ -65,8 +66,6 @@ document.addEventListener("DOMContentLoaded", function(){
       wrapper.append(img);
       document.getElementById('character1').append(wrapper);
     });
-    
-    
     
 
     
@@ -113,12 +112,22 @@ document.addEventListener("DOMContentLoaded", function(){
           {
               label: "Groot",
               backgroundColor: "#F3D403",
-              data: [grootComics, grootSeries, grootStories]
+              data: [data[0].data[0].comics.available, data[0].data[0].series.available, data[0].data[0].stories.available]
           },
           {
               label: falconName,
               backgroundColor: "#2A75B3",
               data: [falconComics, falconSeries, falconStories]
+          },
+        {
+              label: "Wong",
+              backgroundColor: "#cc4224",
+              data: [data[2].data[0].comics.available, data[2].data[0].series.available, data[2].data[0].stories.available]
+          },
+        {
+              label: "Bucky",
+              backgroundColor: "#ffffff",
+              data: [data[3].data[0].comics.available, data[3].data[0].series.available, data[3].data[0].stories.available]
           }
           
       ]

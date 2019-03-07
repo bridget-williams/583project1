@@ -59,7 +59,9 @@ p {
 .character-wrapper{
   display: flex;
   flex-direction: column;
-  flex-wrap
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10pt;
 }
 
 #character2{
@@ -67,7 +69,8 @@ p {
 }
 
 .character-photo{
-  width: 100px; 
+  width: 200px; 
+  height: 200px;
 }
 
 #chart-section{
