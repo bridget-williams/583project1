@@ -102,3 +102,15 @@ a{
   max-width: 90%;
 }
 
+@media screen and (max-width: 750px) {
+  #character1 {
+    flex-direction: column;
+    
+  }
+  
+  .character-photo{
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
