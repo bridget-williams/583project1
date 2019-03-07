@@ -7,7 +7,7 @@
 
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+  margin: 0;
 }
 
 h1 {
@@ -29,11 +29,25 @@ p {
 }
 
 #intro-section{
-  background: #cc4ff5
+  background: #cc4224;
 }
+
+#character1{
+ background: #F3D403;
+}
+
+#character2{
+ background: #2A75B3;
+}
+
+
 
 #groot-photo{
   width: 500px; 
 }
 
+#chart-section{
+  background: #000000;
+  color: #ffffff;
+}
 
