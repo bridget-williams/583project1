@@ -29,10 +29,9 @@ var marvel = api.createClient({
 
 let sidekicks= [
   {'Id':'1010743'},
-  {'Id':'1009297'}
-  //,
-  // {'Id':'1009720'},
-  // {'Id':'1009211'}
+  {'Id':'1009297'},
+  {'Id':'1009720'},
+  {'Id':'1009211'}
   ]
 
 console.log(sidekicks[0].Id);
@@ -53,11 +52,10 @@ app.get('/characters', function (request, response) {
   
   //loop to get data on 2 characters
   sidekicks.forEach((s) => {
-    marvel.characters.find(s.id)
+    marvel.characters.find(s.Id)
     .then(function(data){
-      console.log(data);
         // Persist the data on this country object
-        s.data[0] = data.body;
+        s.data = data.data;
     }, function(err) {
       console.error(err);
     });

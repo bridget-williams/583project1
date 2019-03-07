@@ -41,20 +41,19 @@ document.addEventListener("DOMContentLoaded", function(){
     .then((resp) => resp.json())
     .then((data) => {
     console.group('%cResponse from /characters', 'color: #F037A5; font-size: large');
-    console.log('Data:' + data.name);
-    characterName=data.name;
-    characterPhoto = data.thumbnail.path + '.' + data.thumbnail.extension;
-    let grootComics = data.comics.available;
-      console.log(grootComics);
-    let grootSeries = data.series.available;
-    let grootStories = data.stories.available;
-    console.log(characterPhoto, characterName);
+    console.log(data);
+    characterName=data[0].data[0].name;
+    grootPhoto = data[0].data[0].thumbnail.path + '.' + data[0].data[0].thumbnail.extension;
+    let grootComics = data[0].data[0].comics.available;
+    let grootSeries = data[0].data[0].series.available;
+    let grootStories = data[0].data[0].stories.available;
+    
     
     let h2 = document.createElement('h2');
     h2.innerHTML= 'Groot';
     document.getElementById('character1').append(h2);
     let img = document.createElement('img');
-    img.setAttribute('src', characterPhoto);
+    img.setAttribute('src', grootPhoto);
     img.setAttribute('id', 'groot-photo');
     document.getElementById('character1').append(img);
     
