@@ -17,19 +17,21 @@ document.addEventListener("DOMContentLoaded", function(){
     .then((data) => {
     console.group('%cResponse from /characters', 'color: #F037A5; font-size: large');
     console.log('Data:' + data.name);
-   characterName=data.name;
-    characterPhoto = data.thumbnail.path+;
+    characterName=data.name;
+    characterPhoto = data.thumbnail.path + '.' + data.thumbnail.extension;
     console.log(characterPhoto, characterName);
 
+    let img = document.createElement('img');
+    img.setAttribute('src', characterPhoto);
+    img.setAttribute('id', 'groot-photo');
+    document.getElementById('intro-section').append(img);
 
     
     console.groupEnd();
     return(data);
   });
 
-let img = document.createElement('img');
-    img.setAttribute('src', characterPhoto);
-    document.getElementById('intro-section').append(img);
+
   
   
   
