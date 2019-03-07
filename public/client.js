@@ -100,6 +100,10 @@ document.addEventListener("DOMContentLoaded", function(){
     chartHead.innerHTML= 'How do these well known sidekicks compare?';
     document.getElementById('chart-head').append(chartHead);
     
+    let chartDescription = document.createElement('p');
+    chartDescription.innerHTML= 'This chart compares the number of appearances each sidekicks has in comics, series and stories.';
+    document.getElementById('chart-head').append(chartDescription);
+    
     
   var ctx = document.getElementById("myChart").getContext('2d');
     Chart.defaults.global.defaultFontFamily = 'Raleway';
