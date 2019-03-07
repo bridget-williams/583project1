@@ -11,7 +11,7 @@ body {
 }
 
 h1 {
-  font-style: italic;
+  font-family: 'Bangers', cursive;
   color: #373fff;
 }
 
@@ -26,6 +26,10 @@ p {
 .panel{
   height:800px;
   background:white;
+}
+
+#intro-section{
+  background: #cc4ff5
 }
 
 #groot-photo{
