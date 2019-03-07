@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", function(){
   
   let characterName = '';
   let characterPhoto = '';
+  let grootComics ='' ;
+  let grootSeries = '';
+  let grootStories = '';
   
   //API Responses
   fetch('/characters')
@@ -19,6 +22,9 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log('Data:' + data.name);
     characterName=data.name;
     characterPhoto = data.thumbnail.path + '.' + data.thumbnail.extension;
+    let grootComics = data.comics.available;
+    let grootSeries = data.series.available;
+    let grootStories = data.stories.available;
     console.log(characterPhoto, characterName);
 
     let img = document.createElement('img');
@@ -43,8 +49,8 @@ document.addEventListener("DOMContentLoaded", function(){
       data: {
           labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
           datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
+              label: 'Groot',
+              data: [grootComics, grootSeries, grootStories],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
