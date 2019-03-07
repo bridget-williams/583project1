@@ -10,6 +10,10 @@ body {
   margin: 0;
 }
 
+#grid-wrapper{
+  display: grid;
+}
+
 h1 {
   font-family: 'Bangers', cursive;
   color: #373fff;
