@@ -26,6 +26,16 @@ var marvel = api.createClient({
 
 
 // API Calls
+
+let sidekicks= [
+  {'Id':'1010743'},
+  {'Id':'1009297'},
+  {'Id':'1009720'},
+  {'Id':'1009211'}
+  ]
+
+console.log(sidekicks[0].Id);
+
 console.log('before the api request');
 app.get('/characters', function (request, response) {
   // Search for a character
