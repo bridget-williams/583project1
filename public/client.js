@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function(){
         {
             label: "Groucho",
             backgroundColor: "green",
-            data: [7,2,6]
+            data: [7,2,6]git 
         }
     ]
 }
