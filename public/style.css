@@ -111,12 +111,11 @@ a{
   #character1 {
     flex-direction: column;
     height: 250vh;
-    bottom: 100pt;
+    top:-100pt;
   }
   
   .character-wrapper{
     margin-top: -10px;
-    
   }
   
   .character-photo{
