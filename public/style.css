@@ -54,6 +54,14 @@ h2{
   line-height: 30pt;
 }
 
+#arrow{
+  transform: rotate(180deg);
+  position: absolute;
+  bottom: 80pt;
+  font-size: 100pt;
+  
+}
+
 #character1{
   background: #F3D403;
   display: flex;
@@ -86,6 +94,7 @@ a{
 #chart-section{
   background: #000000;
   color: #ffffff;
+  text-align: center;
 }
 
 #myChart{
