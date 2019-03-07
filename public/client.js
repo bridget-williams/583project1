@@ -6,6 +6,8 @@
 // Document Ready Function
 document.addEventListener("DOMContentLoaded", function(){
   
+  
+  
   console.log('hello world :o');
   
   let characterName = '';
