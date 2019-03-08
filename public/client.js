@@ -76,17 +76,6 @@ document.addEventListener("DOMContentLoaded", function(){
     let falconComics = data[1].data[0].comics.available;
     let falconSeries = data[1].data[0].series.available;
     let falconStories = data[1].data[0].stories.available;
-    
-    
-    
-    let h22 = document.createElement('h2');
-    h22.innerHTML= falconName;
-    document.getElementById('character2').append(h22);
-    let img2 = document.createElement('img');
-    img2.setAttribute('src', falconPhoto);
-    img2.setAttribute('id', 'groot-photo');
-    document.getElementById('character2').append(img2);
-
 
     
     console.groupEnd();
