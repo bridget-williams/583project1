@@ -71,7 +71,7 @@ h2{
   background: #F3D403;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .character-wrapper{
@@ -79,7 +79,7 @@ h2{
   flex-direction: column;
   align-items: center;
   margin: 10pt;
-  margin-top: -150pt;
+  margin-top: 50pt;
 }
 
 .character-photo{
@@ -97,8 +97,8 @@ h2{
 .quote{
   font-family: 'Bangers', cursive;
   color: #F3D403;
-  font-size: 30pt;
-  max-width: 80%;
+  font-size: 28pt;
+  max-width: 57%;
   line-height: 50pt;
   letter-spacing: 1px;
   text-align: center;
@@ -185,8 +185,8 @@ a{
   }
 
   .quote{
-  font-size: 25pt;
-    line-height: 30pt;
+  font-size: 16pt;
+  line-height: 30pt;
   }
   
 }
