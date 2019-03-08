@@ -152,12 +152,21 @@ a{
   
   .big-text{
     font-size: 30pt;
+    text-align:center;
   }
   .intro-text, .quote {
     font-size: 12pt;
     line-height: 20pt;
   }
   
+  #arrow{
+  transform: rotate(180deg);
+  position: absolute;
+  bottom: 200pt;
+  font-size: 100pt;
+  
+}
+
   
 }
 
