@@ -50,9 +50,13 @@ document.addEventListener("DOMContentLoaded", function(){
     console.log(data);
     
     data.forEach(function(c){
+      
       let name = c.data[0].name;
       let photo = c.data[0].thumbnail.path + '.' + c.data[0].thumbnail.extension;
       let description = c.data[0].description
+      if (description === ''){
+        description = 'Marvel does not provide a description for this character.';
+      }
       let appears = '';
       let wrapper = document.createElement('div');
       wrapper.setAttribute('class','character-wrapper');
