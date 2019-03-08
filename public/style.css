@@ -104,6 +104,22 @@ h2{
   text-align: center;
 }
 
+#bubble{
+  position: absolute; 
+  top:20pt;
+  z-index: -10000;
+
+}
+
+.st0{
+  fill:#FFFFFF;
+  stroke-miterlimit:10;
+}
+
+.st1{
+  stroke-miterlimit:10;
+}
+
 .attr{
   font-family: 'Bangers', cursive;
   font-size: 20pt;
