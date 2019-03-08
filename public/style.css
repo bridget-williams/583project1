@@ -130,8 +130,6 @@ a{
 @media screen and (max-width: 750px) {
   #character1 {
     flex-direction: column;
-    height: 250vh;
-    top:-100pt;
   }
   
   .character-wrapper{
