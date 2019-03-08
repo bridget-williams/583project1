@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function(){
 					triggerElement: slides[i]
 				})
 				.setPin(slides[i])
-				.addIndicators() // add indicators (requires plugin)
+				//.addIndicators() // add indicators (requires plugin)
 				.addTo(controller);
 		}
 
