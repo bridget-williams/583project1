@@ -83,14 +83,19 @@ h2{
   margin-top: -150pt;
 }
 
-#character2{
- background: #2A75B3;
-}
-
 .character-photo{
   width: 275px; 
   height: 275px;
 }
+
+#character2{
+ background: #2A75B3;
+}
+
+.quote{
+  font-family: 'Bangers', cursive;
+}
+
 
 a{
   text-decoration: none;
