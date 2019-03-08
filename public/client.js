@@ -87,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function(){
     
     let chartHead = document.createElement('h2');
     chartHead.innerHTML= 'How do these well known sidekicks compare?';
+    chartHead.setAttribute('class', 'normal-heading');
     document.getElementById('chart-head').append(chartHead);
     
     let chartDescription = document.createElement('p');

@@ -113,6 +113,7 @@ h2{
 
 a{
   text-decoration: none;
+  color: #F3D403;
 }
 
 #chart-section{
@@ -151,7 +152,7 @@ a{
   }
   
   .big-text{
-    font-size: 30pt;
+    font-size: 50pt;
     text-align:center;
   }
   .intro-text, .quote {
@@ -160,13 +161,17 @@ a{
   }
   
   #arrow{
-  transform: rotate(180deg);
-  position: absolute;
   bottom: 200pt;
-  font-size: 100pt;
-  
+  font-size: 70pt;
 }
+  .normal-heading{
+  font-size: 30pt;
+  }
 
+  .quote{
+  font-size: 25pt;
+    line-height: 30pt;
+  }
   
 }
 
