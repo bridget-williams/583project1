@@ -51,9 +51,11 @@ document.addEventListener("DOMContentLoaded", function(){
     
     data.forEach(function(c){
       
+      //loop through data to create and add elements to page to show list of characters
       let name = c.data[0].name;
       let photo = c.data[0].thumbnail.path + '.' + c.data[0].thumbnail.extension;
       let description = c.data[0].description
+      //if API doesn't provide description, show this message
       if (description === ''){
         description = 'Marvel does not provide a description for this character.';
       }
@@ -64,17 +66,22 @@ document.addEventListener("DOMContentLoaded", function(){
       let p = document.createElement('p');
       p.innerHTML = description;
       h2.innerHTML= name;
-      wrapper.append(h2);
+      
       let img = document.createElement('img');
       img.setAttribute('src', photo);
       img.setAttribute('class', 'character-photo');
+      
+      //Add all the elements to a flex wrapper
+      wrapper.append(h2);
       wrapper.append(img);
       wrapper.append(p);
+      
+      //append the wrapper to the body
       document.getElementById('character1').append(wrapper);
     });
     
 
-    
+    //falcon data for Chart (used this as test case to make sure above loop was correct)
     falconName=data[1].data[0].name;
     falconPhoto = data[1].data[0].thumbnail.path + '.' + data[0].data[0].thumbnail.extension;
     let falconComics = data[1].data[0].comics.available;
@@ -83,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
     
     console.groupEnd();
-    // return(data);
+  
     
     
   
