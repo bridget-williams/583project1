@@ -150,9 +150,12 @@ a{
     text-align: center;
   }
   
+  .big-text{
+    font-size: 30pt;
+  }
   .intro-text, .quote {
     font-size: 12pt;
-    line-height: 12pt;
+    line-height: 20pt;
   }
   
   
